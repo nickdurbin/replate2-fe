@@ -8,14 +8,11 @@ const BusinessDashboard = props => {
   console.log(props.business_id)
  // initialState
  const [requestAdd, setRequestAdd] = useState({
-  id: "",
   type: "",
-  servings: "",
+  servings: 4,
   pickup_time: Date.now(),
   description: "describe food to be picked up.",
   completed: false,
-  business_id: props.business_id,
-  volunteer_id: ""
  });
 
  console.log(requestAdd.business_id)
@@ -82,7 +79,7 @@ const BusinessDashboard = props => {
      <FormGroup>
       <Label for="exampleComplete">Servings</Label>
       <Input
-       type="text"
+       type="number"
        name="servings"
        id="exampleServings"
        placeholder="Choose number of servings"

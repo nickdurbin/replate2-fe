@@ -35,23 +35,23 @@ function App({ setUserId, business_id }) {
    </nav>
    <BrowserRouter>
     <Switch>
-     <Route exact path="/" render={props => <SignUp />} />
+     <Route exact path="/" render={props => <SignUp {...props} />} />
      <Route
       path="/business/register"
-      render={props => <BusinessRegisterApp />}
+      render={props => <BusinessRegisterApp {...props} />}
      />
      <Route
       path="/volunteer/register"
-      render={props => <VolunteerRegisterApp />}
+      render={props => <VolunteerRegisterApp {...props} />}
      />
-     <Route path="/volunteer/login" render={props => <VolunteerLoginForm />} />
-     <Route path="/volunteer/home" render={props => <VolunteerDashboard />} />
-     <Route path="/business/login" render={props => <BusinessLoginForm />} />
+     <Route path="/volunteer/login" render={props => <VolunteerLoginForm {...props} />} />
+     <Route path="/volunteer/home" render={props => <VolunteerDashboard {...props} />} />
+     <Route path="/business/login" render={props => <BusinessLoginForm {...props} />} />
      <Route
       path="/business"
-      render={props => <BusinessDashboard />}
+      render={props => <BusinessDashboard {...props} />}
      />
-     <PrivateRoute path="/requests" render={props => <Requests />} />
+     <PrivateRoute path="/requests" render={props => <Requests {...props} />} />
     </Switch>
    </BrowserRouter>
   </main>
